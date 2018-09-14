@@ -346,7 +346,7 @@ describe 'ActiveRecord Obstacle Course' do
     # ------------------------------------------------------------
 
     # ------------------ Using ActiveRecord ----------------------
-    items_for_user_3_third_order = Order.where(user_id: 3).third.items.pluck(:name)
+    items_for_user_3_third_order = User.find(3).orders[2].items.pluck(:name)
     # ------------------------------------------------------------
 
     # Expectation
