@@ -438,7 +438,7 @@ describe 'ActiveRecord Obstacle Course' do
     # -----------------------------------------------------------
 
     # ------------------ Improved Solution ----------------------
-    orders = Order.joins(:items).where('user_id=2 AND items.id=4')
+    orders = Order.joins(:items).where('user_id=? AND items.id=?',2,4)
     # -----------------------------------------------------------
 
     # Expectation
